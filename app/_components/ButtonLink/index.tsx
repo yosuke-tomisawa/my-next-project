@@ -1,4 +1,4 @@
-import styles from "@/_components/Buttonlink/index.module.scss";
+import styles from "./index.module.scss";
 
 type Props = {
   href: string;
