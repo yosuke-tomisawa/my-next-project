@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./index.module.scss";
+import styles from "./index.module.css";
 import { News } from "@/_libs/microcms";
 import classNames from "classnames/bind";
 import Category from "../Category";
