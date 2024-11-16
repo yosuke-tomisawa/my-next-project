@@ -4,6 +4,7 @@ import { News } from "@/_libs/microcms";
 import classNames from "classnames/bind";
 import Category from "../Category";
 import Date from "../Date";
+import Link from "next/link";
 
 type Props = {
   data: News;
@@ -15,7 +16,12 @@ export default function Article({ data }: Props) {
       <h1 className="{style.title}">{data.title}</h1>
       <p className="{style.description}">{data.description}</p>
       <div className="{style.meta}">
-        <Category category={data.category} />
+        <Link
+          href={`/news/category/${data.category.id}`}
+          className="{styles.categoryLink}"
+        >
+          <Category category={data.category} />
+        </Link>
         <Date date="{data.publishedAt ?? data.createdAt}" />
       </div>
       {data.thumbnail && (
